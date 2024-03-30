@@ -24,5 +24,13 @@ writeable derived atom:
 这里面的归根结底是因为 jotai 中，是通过 EventEmitter 来实现状态的订阅和发布的，所以只有当有订阅者的时候，状态才会被创建。
 
 
+// -------------------
+
+Provider 会创建一个新的 context，所以对于同一个 atom 在不同的 Provider 中，countAtom 是不同的
+
+为每个子树提供不同的状态，provider 允许在不同的组件树中隔离状态，起到作用域隔离的作用
+
+应用中有多个 Provider 可以管理不同的状态部分，可以让组件的管理更加清晰
+
 
 
