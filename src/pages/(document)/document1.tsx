@@ -6,7 +6,7 @@ export default function Document1() {
   const watchedAnime = useAtomValue(watchedAnimeAtom)
   const setAnime = useSetAtom(animeAtom)
 
-  // 当修改顶层的 atom 时，derive
+  // 当修改顶层的 atom 时，derive atom (watchedAnimeAtom) 也会更新
   const handleAddClick = () => {
     setAnime((prev) => [
       ...prev,
