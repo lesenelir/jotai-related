@@ -1,5 +1,7 @@
 # jotai-related
 
+jotai 的核心是原子，原子是状态的最小单元，原子之间可以有依赖关系，原子的状态是全局的，可以在任何地方访问
+
 核心： jotai 只是去把 useState 进行集成，从而使得 state 可以全局访问，即在全局不同的组件可以拿到同一个状态值。
 
 如果把 jotai 依赖关系当作一个有向图，那么 primitive atom 原生原子就是顶层的节点，derived atom 派生原子就是指向 primitive atom 的节点，selector 选择器就是指向 derived atom 的节点。
@@ -17,6 +19,11 @@ writeable derived atom:
 - 通过 `set` 方法设置值， `set` 用于触发某种依赖关系
 - 本身值可以修改，可以通过 `useSetAtom` 来使用
 
+// -------------------
+
+路径：
+document -> provider -> core -> login project
+
 
 // -------------------
 
@@ -33,4 +40,12 @@ Provider 会创建一个新的 context，所以对于同一个 atom 在不同的
 应用中有多个 Provider 可以管理不同的状态部分，可以让组件的管理更加清晰
 
 
+// -------------------
+
+jotai 这个库你写好，可以把代码写成艺术品的
+
+
+// -------------------
+
+关于 login jotai 模块的使用，偏向实践
 
