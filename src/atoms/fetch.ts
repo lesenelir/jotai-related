@@ -1,6 +1,6 @@
 import { atom } from 'jotai'
 
-type TUser = {
+export type TUser = {
   id: number
   name: string
   phone: string

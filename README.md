@@ -22,7 +22,7 @@ writeable derived atom:
 // -------------------
 
 路径：
-document -> provider -> core -> login project
+document -> provider -> core -> login project -> fetch -> query
 
 
 // -------------------
@@ -48,4 +48,9 @@ jotai 这个库你写好，可以把代码写成艺术品的
 // -------------------
 
 关于 login jotai 模块的使用，偏向实践
+
+
+// -------------------
+
+可以把数据请求放入 atom 内。
 

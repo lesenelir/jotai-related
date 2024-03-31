@@ -10,6 +10,8 @@ export type Path =
   | `/fetch`
   | `/login`
   | `/provider`
+  | `/query`
+  | `/query/mutation`
 
 export type Params = {
   

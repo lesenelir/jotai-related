@@ -8,9 +8,15 @@ dependencies:
   '@generouted/react-router':
     specifier: ^1.18.5
     version: 1.18.5(react-router-dom@6.22.3)(react@18.2.0)(vite@5.2.7)
+  '@tanstack/query-core':
+    specifier: ^5.28.9
+    version: 5.28.9
   jotai:
     specifier: ^2.7.2
     version: 2.7.2(@types/react@18.2.73)(react@18.2.0)
+  jotai-tanstack-query:
+    specifier: ^0.8.5
+    version: 0.8.5(@tanstack/query-core@5.28.9)(jotai@2.7.2)(wonka@6.3.4)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -20,6 +26,9 @@ dependencies:
   react-router-dom:
     specifier: ^6.22.3
     version: 6.22.3(react-dom@18.2.0)(react@18.2.0)
+  wonka:
+    specifier: ^6.3.4
+    version: 6.3.4
 
 devDependencies:
   '@types/node':
@@ -733,6 +742,10 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
+
+  /@tanstack/query-core@5.28.9:
+    resolution: {integrity: sha512-hNlfCiqZevr3GRVPXS3MhaGW5hjcxvCsIQ4q6ff7EPlvFwYZaS+0d9EIIgofnegDaU2BbCDlyURoYfRl5rmzow==}
+    dev: false
 
   /@types/babel__core@7.20.5:
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -1651,6 +1664,18 @@ packages:
     hasBin: true
     dev: true
 
+  /jotai-tanstack-query@0.8.5(@tanstack/query-core@5.28.9)(jotai@2.7.2)(wonka@6.3.4):
+    resolution: {integrity: sha512-cFq+1sE7Qkt7Kh9Db2KE8LXdbPiGwCiy8S5YSEnjUDxF59A4XhoXTDJBuPiMIA1dD1/yMsNKr1ADfN5CvscYZw==}
+    peerDependencies:
+      '@tanstack/query-core': '*'
+      jotai: '>=2.0.0'
+      wonka: ^6.3.4
+    dependencies:
+      '@tanstack/query-core': 5.28.9
+      jotai: 2.7.2(@types/react@18.2.73)(react@18.2.0)
+      wonka: 6.3.4
+    dev: false
+
   /jotai@2.7.2(@types/react@18.2.73)(react@18.2.0):
     resolution: {integrity: sha512-6Ft5kpNu8p93Ssf1Faoza3hYQZRIYp7rioK8MwTTFnbQKwUyZElwquPwl1h6U0uo9hC0jr+ghO3gcSjc6P35/Q==}
     engines: {node: '>=12.20.0'}
@@ -2392,6 +2417,10 @@ packages:
     dependencies:
       isexe: 2.0.0
     dev: true
+
+  /wonka@6.3.4:
+    resolution: {integrity: sha512-CjpbqNtBGNAeyNS/9W6q3kSkKE52+FjIj7AkFlLr11s/VWGUu6a2CdYSdGxocIhIVjaW/zchesBQUKPVU69Cqg==}
+    dev: false
 
   /wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
