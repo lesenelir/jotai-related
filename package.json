@@ -14,8 +14,9 @@
   },
   "dependencies": {
     "@generouted/react-router": "^1.18.5",
-    "@tanstack/query-core": "^5.28.9",
     "@lesenelir/jotai": "workspace:*",
+    "@tanstack/query-core": "^5.28.9",
+    "clsx": "^2.1.0",
     "jotai": "^2.7.2",
     "jotai-tanstack-query": "^0.8.5",
     "react": "^18.2.0",
