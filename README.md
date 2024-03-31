@@ -16,7 +16,7 @@ read-only derived atom:
 
 writeable derived atom:
 - 本身不存在状态值，主要用于做一些状态管理，定义如何去更新其他原子
-- 通过 `set` 方法设置值， `set` 用于触发某种依赖关系
+  - 通过 `set` 方法设置值， `set` 用于触发某种依赖关系
 - 本身值可以修改，可以通过 `useSetAtom` 来使用
 
 // -------------------
@@ -27,7 +27,7 @@ document -> provider -> core -> login project -> fetch -> query -> my-atom-pages
 
 // -------------------
 
-一开始原子是没有状态的，只有当原子和 `useAtom` 或者 `useAtomValue` 或者 `useUpdateAtom` 之类的 hook 绑定之后，原子才会有状态。
+一开始原子是没有状态的，只有当原子和 `useAtom` 或者 `useAtomValue` 之类的 hook 绑定之后，原子才会有状态。
 这里面的归根结底是因为 jotai 中，是通过 EventEmitter 来实现状态的订阅和发布的，所以只有当有订阅者的时候，状态才会被创建。
 
 
