@@ -83,6 +83,13 @@ importers:
         version: 5.2.7(@types/node@20.12.0)
 
   packages/lesenelir-jotai:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
     devDependencies:
       '@types/node':
         specifier: ^20.8.8

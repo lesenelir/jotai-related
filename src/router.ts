@@ -10,6 +10,7 @@ export type Path =
   | `/document1`
   | `/fetch`
   | `/login`
+  | `/ownAtom`
   | `/provider`
   | `/query`
   | `/query/mutation`
