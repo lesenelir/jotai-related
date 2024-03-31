@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,6 +15,7 @@
   "dependencies": {
     "@generouted/react-router": "^1.18.5",
     "@tanstack/query-core": "^5.28.9",
+    "@lesenelir/jotai": "workspace:*",
     "jotai": "^2.7.2",
     "jotai-tanstack-query": "^0.8.5",
     "react": "^18.2.0",
