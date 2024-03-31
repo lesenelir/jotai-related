@@ -22,7 +22,7 @@ writeable derived atom:
 // -------------------
 
 路径：
-document -> provider -> core -> login project -> fetch -> query
+document -> provider -> core -> login project -> fetch -> query -> my-atom-pages dark -> my-atom-pages light -> my-atom-pages ownAtom
 
 
 // -------------------
