@@ -7,6 +7,7 @@ export type Path =
   | `/`
   | `/core`
   | `/document1`
+  | `/fetch`
   | `/login`
   | `/provider`
 
