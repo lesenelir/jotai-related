@@ -9,6 +9,7 @@ export type Path =
   | `/dark`
   | `/document1`
   | `/fetch`
+  | `/level`
   | `/login`
   | `/ownAtom`
   | `/provider`

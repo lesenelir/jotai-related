@@ -23,6 +23,10 @@ const path: TPathElement[] = [
     component: 'Document1',
   },
   {
+    path: '/level',
+    component: 'Level'
+  },
+  {
     path: '/fetch',
     component: 'Fetch',
   },

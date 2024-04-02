@@ -1,6 +1,6 @@
 import { useAtomValue, useSetAtom } from 'jotai'
 
-import { animeAtom, watchedAnimeAtom } from '@/atoms'
+import { type TAnime, animeAtom, watchedAnimeAtom } from '@/atoms'
 
 export default function Document1() {
   const watchedAnime = useAtomValue(watchedAnimeAtom)
@@ -8,7 +8,7 @@ export default function Document1() {
 
   // 当修改顶层的 atom 时，derive atom (watchedAnimeAtom) 也会更新
   const handleAddClick = () => {
-    setAnime((prev) => [
+    setAnime((prev: TAnime[]) => [
       ...prev,
       { name: 'Cowboy Bebop', episodes: 26, watched: true }
     ])

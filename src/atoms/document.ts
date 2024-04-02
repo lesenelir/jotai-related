@@ -4,7 +4,7 @@ export const countryAtom = atom<string>('China')
 
 export const citiesAtom = atom<string[]>(['Beijing', 'Shanghai', 'Guangzhou'])
 
-type TAnime = {
+export type TAnime = {
   name: string
   episodes: number
   watched: boolean
