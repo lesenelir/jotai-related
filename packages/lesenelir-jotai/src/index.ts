@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { IAtom, IAtomState } from '@/types'
 
 // keep track of the state of the atom
-export const atomStateMap = new WeakMap<IAtom<any>, IAtomState<any>>()
+export const atomStateMap = new WeakMap<IAtom<unknown>, IAtomState<unknown>>()
 
 // atom is a function that returns an object with an init property
 export const atom = <T>(initialValue: T): IAtom<T> => {
@@ -17,11 +17,11 @@ export const getAtomState = <T>(atom: IAtom<T>): IAtomState<T> => {
   let atomState = atomStateMap.get(atom)
 
   if (!atomState) {
-    atomState = { value: atom.init, listeners: new Set<Function>() }
+    atomState = { value: atom.init, listeners: new Set<() => void>() }
     atomStateMap.set(atom, atomState)
   }
 
-  return atomState
+  return <IAtomState<T>>atomState
 }
 
 
@@ -46,7 +46,7 @@ export const useAtom = <T>(atom: IAtom<T>): [T, Dispatch<SetStateAction<T>>] => 
       : nextValue
 
     // all the subscribed components know atom's state changes
-    atomState.listeners.forEach((l: Function) => l())
+    atomState.listeners.forEach((l: () => void) => l())
   }
 
   return [value, setAtom]

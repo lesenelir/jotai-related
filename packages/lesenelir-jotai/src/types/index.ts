@@ -4,6 +4,6 @@ export interface IAtom<T> {
 
 export interface IAtomState<T> {
   value: T
-  listeners: Set<Function>
+  listeners: Set<() => void>
 }
 
