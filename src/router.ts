@@ -15,6 +15,7 @@ export type Path =
   | `/provider`
   | `/query`
   | `/query/mutation`
+  | `/suspense`
 
 export type Params = {
   
