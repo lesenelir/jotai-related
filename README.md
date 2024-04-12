@@ -20,3 +20,7 @@ The reading path of this repository is as follows:
 
 8. my-atom-pages ownAtom
 
+9. suspense
+
+10. split
+
