@@ -6,7 +6,11 @@ import generouted from '@generouted/react-router/plugin'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      babel: {
+        presets: ['jotai/babel/preset']
+      }
+    }),
     generouted()
   ],
   resolve: {

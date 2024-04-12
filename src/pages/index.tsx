@@ -1,3 +1,5 @@
+import { DevTools } from 'jotai-devtools'
+
 import { Link, type Path } from '@/router.ts'
 
 type TPathElement = {
@@ -50,11 +52,16 @@ const path: TPathElement[] = [
     path: '/query/mutation',
     component: 'QueryMutation',
   },
+  {
+    path: '/suspense',
+    component: 'Suspense',
+  }
 ]
 
 export default function Home() {
   return (
     <div className={'p-2 flex flex-col gap-2'}>
+      <DevTools isInitialOpen/>
       {
         path.map(item => (
           <Link

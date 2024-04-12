@@ -1,3 +1,4 @@
+import { DevTools } from 'jotai-devtools'
 import { type FormEvent, useRef } from 'react'
 import { useAtomValue, useSetAtom } from 'jotai'
 
@@ -47,6 +48,8 @@ export default function LoginPage() {
 
   return (
     <div className={'flex flex-col gap-2 p-4'}>
+      <DevTools/>
+
       {
         isLoading ? (
           <div className={'bg-gray-100 p-2 rounded-lg w-fit'}>
