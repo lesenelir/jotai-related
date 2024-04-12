@@ -20,6 +20,7 @@ function ItemList() {
 }
 
 // props 是一个 atom
+// atoms in atom pattern 可以减少不必要的渲染，从原来的数组中分解出来的原子数组，可以单独更新，而不是整个数组更新。
 function Item({ itemAtom }: { itemAtom: PrimitiveAtom<TItem> }) {
   const [item, setItem] = useAtom(itemAtom)
 
